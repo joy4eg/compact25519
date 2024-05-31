@@ -1,8 +1,8 @@
 #ifndef COMPACT_DISABLE_ED25519
-#include "../src/compact_ed25519.h"
+#include "compact_ed25519.h"
 #endif
 #ifndef COMPACT_DISABLE_X25519
-#include "../src/compact_x25519.h"
+#include "compact_x25519.h"
 #endif
 #include <stdio.h>
 #include <stdint.h>
@@ -156,7 +156,7 @@ static int testEd25519(pcg32_random_t* rng) {
 #endif
 
 int main(void) {
-    srand(time(NULL)); 
+    srand(time(NULL));
     pcg32_random_t rng;
     rng.state = rand();
     rng.inc = rand() | 1;
